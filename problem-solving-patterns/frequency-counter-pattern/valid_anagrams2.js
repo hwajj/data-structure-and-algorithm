@@ -1,5 +1,5 @@
 /* eslint-disable */
-function validAnagram2(txt1, txt2) {
+function validAnagram(txt1, txt2) {
   //0.
   if (txt1.length !== txt2.length) return false;
 
