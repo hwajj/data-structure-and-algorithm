@@ -10,7 +10,7 @@ function maxSubarraySum(arr, num) {
     let temp = 0;
     for (let j = 0; j < num; j++) {
       temp += arr[i + j];
-    }
+    } 
     if (temp > max) max = temp;
   }
   return max;
