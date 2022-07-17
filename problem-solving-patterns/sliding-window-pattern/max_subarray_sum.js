@@ -1,14 +1,18 @@
+//슬라이딩 윈도우가 아님. 다시 풀기
+//연속하는 n개의 숫자를 더해서 가장 큰 값을 반환하는 문제
 function maxSubarraySum(arr, num) {
-  if (arr.length < num) return null;
-
+  let sum = 0;
   let max = -Infinity;
-  for (let i = 0; i < arr.length - num + 1; i++) {
-    let tmp = 0;
-    for (let j = i; j < i + num; j++) {
-      tmp += arr[j];
-    }
-    max = Math.max(max, tmp);
+  if (arr.length < num) return null;
+  for (let i = 0; i < num; i++) {
+    sum += arr[i];
   }
+
+  for (let i = 0; i < arr.length - num; i++) {
+    sum += arr[i + num] - arr[i];
+    max = Math.max(sum, max);
+  }
+
   return max;
 }
 

@@ -1,13 +1,16 @@
 /* eslint-disable */
 //어려움.다시풀기
 function countUniqueValues(arr) {
-  let num;
   let left = 0;
-  for (let right = 1; right < arr.length; right++) {
-    if (arr[left] !== arr[right]) {
+  let count;
+  let right = 1;
+  while (right < arr.length) {
+    if (arr[left] != arr[right]) {
+      console.log(arr[left]);
       left++;
       arr[left] = arr[right];
     }
+    right++;
   }
 
   return left + 1;

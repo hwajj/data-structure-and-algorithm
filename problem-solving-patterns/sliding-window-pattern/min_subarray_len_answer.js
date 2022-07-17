@@ -1,4 +1,4 @@
-//🔥🔥🔥🔥
+//🔥 더해서 sum이 되는 연속된 숫자의 최소 길이
 function minSubArrayLen(nums, sum) {
   let total = 0;
   let start = 0;
