@@ -1,0 +1,13 @@
+function linearSearch(arr, num) {
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    console.log(element);
+    if (element === num) return i;
+  }
+  return -1;
+}
+
+console.log(linearSearch([10, 15, 20, 25, 30], 25)); //3
+console.log(linearSearch([100], 100)); //0
+console.log(linearSearch([100], 200)); //-1
+console.log(linearSearch([], 200)); //-1

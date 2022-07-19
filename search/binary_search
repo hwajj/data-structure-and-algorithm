@@ -1,0 +1,21 @@
+function binarySearch(arr, num) {
+  let left = 0;
+  let right = arr.length - 1;
+  let middle = Math.floor(left + right / 2);
+  while (arr[middle] != num && left <= right) {
+    console.log('!');
+    if (arr[middle] < num) {
+      left = middle + 1;
+    } else {
+      right = middle - 1;
+    }
+    middle = Math.floor((left + right) / 2);
+  }
+  if (arr[middle] == num) return middle;
+  else return -1;
+}
+
+console.log(binarySearch([1, 2, 3, 4, 5, 6], 2));
+console.log(binarySearch([1, 2, 3, 4, 5], 3));
+console.log(binarySearch([1, 2, 3, 4, 5], 5));
+console.log(binarySearch([1, 2, 3, 4, 5], 6));
